@@ -53,11 +53,32 @@ Song Name: *Jesus Loves Me*
    
 ---
 
+## Tech Stack 🛠️
+
+This app is built using the following technologies:
+
+### Backend:
+- **Google Generative AI (gemini-1.5-flash)**: To generate song lyrics, English-to-Hangul phonetic transliteration, and Korean translations.
+- **Python**: Core programming language for building the app.
+
+### Frontend:
+- **Streamlit**: A lightweight Python web framework for creating interactive and shareable web apps.
+
+### Environment & Dependency Management:
+- **python-dotenv**: To securely manage local environment variables during development.
+- **Streamlit Secrets Manager**: For securely storing API keys in a deployed environment.
+
+### Hosting:
+- **Streamlit Community Cloud**: Free and simple platform for hosting Streamlit apps.
+
+---
+
 ## Acknowledgments 🙏
 
 Special thanks to:
 - **Google Generative AI** for powering the app's natural language processing capabilities.
 - **Streamlit** for providing an easy-to-use web app framework.
+- This project is dedicated to my maternal grandfather, who wanted to learn and sing in English. His enthusiasm for learning inspired me to create this app.
 
 ---
 

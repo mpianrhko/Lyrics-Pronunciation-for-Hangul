@@ -58,4 +58,14 @@ Song Name: *Jesus Loves Me*
 Special thanks to:
 - **Google Generative AI** for powering the app's natural language processing capabilities.
 - **Streamlit** for providing an easy-to-use web app framework.
-```
+
+---
+
+## FAQ ❓
+
+**Q: What if the app cannot fetch lyrics for a song?**  
+A: The app uses an AI model to retrieve lyrics. If the song is very obscure or unavailable in the model’s dataset, the app may fail to fetch the lyrics. Try using more famous or widely known songs.
+
+**Q: Are there limits to API usage?**  
+A: Yes, the app relies on Google Generative AI, which may have rate limits depending on your API plan. Heavy usage could lead to temporary restrictions.
+

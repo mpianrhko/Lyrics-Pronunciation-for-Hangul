@@ -1,13 +1,16 @@
 import os
-from dotenv import load_dotenv
 import streamlit as st
 import google.generativeai as genai
 
-# Load environment variables
-load_dotenv()
-
-# Retrieve API key
-api_key = os.getenv("GOOGLE_API_KEY")
+# Load API Key
+# Check if running on Streamlit Cloud (secrets available)
+if "GOOGLE_API_KEY" in os.environ:
+    api_key = os.environ["GOOGLE_API_KEY"]
+else:
+    # Load from .env file (for local development)
+    from dotenv import load_dotenv
+    load_dotenv()
+    api_key = os.getenv("GOOGLE_API_KEY")
 
 # Configure Generative AI
 genai.configure(api_key=api_key)
@@ -55,8 +58,8 @@ song_name = st.text_input("Enter Song Name:")
 if st.button("Generate"):
     if song_name.strip():
         with st.spinner("Fetching song details..."):
-            # Fetch lyrics
             try:
+                # Fetch lyrics
                 lyrics = fetch_lyrics(song_name)
                 pronunciation = generate_english_pronunciation_in_hangul(lyrics)
                 translation = generate_korean_translation(lyrics)
